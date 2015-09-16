@@ -25,7 +25,7 @@ karaf@root()> log:tail
         :
 015-09-16 18:37:26,101 | INFO  |  Component Actor | AppComponent                     | 9 - araobp.onos-app - 0.0.1.SNAPSHOT | Stopped
 ```
-It worked!
+It worked on Karaf OSGi container with "scr" feature.
 
 ##OSGi Declarative Services (DS)
 
@@ -63,4 +63,10 @@ public class AppComponent {
 
 }
 ```
+
+##Comparison with OpenDaylight
+
+OpenDaylight project provides ["opendaylight-startup-archetype"](https://wiki.opendaylight.org/view/OpenDaylight_Controller:MD-SAL:Startup_Project_Archetype). I used the archetype and felt that it is heavily dependent on YANG and MD-SAL: APIs for datastore transactions and RPCs.
+
+On the other hand, ONOS developers can use very standard Java APIs such as "Map.put(K key, V value)" or @Activate annotaion.
 

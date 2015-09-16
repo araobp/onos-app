@@ -74,4 +74,6 @@ ONOS also provides two kinds of datastore:
 - ECMAP (Eventually Consistent KVS supporting Java's Map interface)
 - RAFT/copycat (Stronglly Consistent KVS supporting Java's Map interface)
 
+These datastores are embedded in ONOS, so no sockets(UNIX/INET) are required to get acccess to them from an application.
+
 ONOS is good for networking services requiring BASE for high performance and linear scalability.

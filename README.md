@@ -1,9 +1,9 @@
 #How to make an ONOS application
 
 [The ONOS project](http://onosproject.org/) provides a maven archetype ["onos-bundle-archetype"](
-https://wiki.onosproject.org/display/ONOS/Template+Application+Tutorial)
+https://wiki.onosproject.org/display/ONOS/Template+Application+Tutorial) that is very cool.
 
-##Testing onos-bundle-arcehtype
+##Testing onos-bundle-archetype
 
 ```
 $ mvn archetype:generate -DarchetypeGroupId=org.onosproject -DarchetypeArtifactId=onos-bundle-archetype

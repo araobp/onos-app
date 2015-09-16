@@ -66,9 +66,9 @@ public class AppComponent {
 
 ##Comparison with OpenDaylight
 
-OpenDaylight project provides ["opendaylight-startup-archetype"](https://wiki.opendaylight.org/view/OpenDaylight_Controller:MD-SAL:Startup_Project_Archetype). I used the archetype and felt that it is heavily dependent on YANG and MD-SAL: APIs for datastore transactions and RPCs. OpenDaylight is good for network management.
+OpenDaylight project provides ["opendaylight-startup-archetype"](https://wiki.opendaylight.org/view/OpenDaylight_Controller:MD-SAL:Startup_Project_Archetype). I used the archetype and felt that it is heavily dependent on YANG and MD-SAL: APIs for datastore transactions (ACID) and RPCs. OpenDaylight is good for network management or orchestration in an multi-vendor environment.
 
-On the other hand, ONOS developers can use very standard Java APIs such as "Map.put(K key, V value)" or @Activate annotaion.
+On the other hand, ONOS developers can enjoy very standard Java APIs such as "Map.put(K key, V value)" or @Activate annotaion.
 
 ONOS also provides two kinds of datastore:
 - ECMAP (Eventually Consistent KVS supporting Java's Map interface)

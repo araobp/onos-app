@@ -17,7 +17,6 @@
   </parent>
 
   <modules>
-    <module>parent</module>
     <module>sample</module>
   </modules>
 

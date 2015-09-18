@@ -10,12 +10,6 @@
   <version>0.0.1-SNAPSHOT</version>
   <packaging>pom</packaging>
  
-  <parent>
-    <groupId>araobp</groupId>
-    <artifactId>onos-app-parent</artifactId>
-    <version>0.0.1-SNAPSHOT</version>
-  </parent>
-
   <modules>
     <module>sample</module>
   </modules>

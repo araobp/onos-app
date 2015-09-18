@@ -77,3 +77,26 @@ ONOS also provides two kinds of datastore:
 These datastores are embedded in ONOS, so no sockets(UNIX/INET) are required to get acccess to them from an application.
 
 ONOS is good for networking services requiring BASE for high performance and linear scalability.
+
+##Building ONOS
+
+###Prerequisites
+
+- Java8
+- Maven3.3.X
+- $JAVA_HOME
+- $KARAF_HOME
+
+See this page: https://wiki.onosproject.org/display/ONOS/Installing+and+Running+ONOS
+
+###Build
+
+```
+$ git clone https://gerrit.onosproject.org/onos
+$ mvn clean install
+```
+
+##Note
+I could not build ONOS somehow due to some error, so I refered to the following:
+https://ask.opendaylight.org/question/3816/odl-conntroller-build-error-execution-default-jar-of-goal-orgapachemavenpluginsmaven-archetype-plugin22jar-failed/
+

@@ -19,6 +19,7 @@ import org.apache.felix.scr.annotations.Activate;
 import org.apache.felix.scr.annotations.Component;
 import org.apache.felix.scr.annotations.Deactivate;
 import org.apache.felix.scr.annotations.Reference;
+import org.apache.felix.scr.annotations.ReferenceCardinality;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
@@ -30,7 +31,7 @@ public class AppConsumer {
 
     private final Logger log = LoggerFactory.getLogger(getClass());
     
-    @Reference
+    @Reference(cardinality = ReferenceCardinality.MANDATORY_UNARY)
     private AppService appService;
 
     @Activate

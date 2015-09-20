@@ -96,7 +96,28 @@ $ git clone https://gerrit.onosproject.org/onos
 $ mvn clean install
 ```
 
+##onos-package
+
+```
+.
+├── apache-karaf-3.0.3   ==> Karaf itself
+├── apps   ==> Karaf features for ONOS
+├── bin    ==> ONOS-related scripts
+├── init   ==> ONOS-related config
+└── VERSION
+
+```
+###Running the sample on ONOS
+```
+onos> list 
+                 :
+147 | Active    |  80 | 1.4.0.SNAPSHOT   | onlab-netty                           
+157 | Active    |  80 | 1.4.0.SNAPSHOT   | onos-incubator-net                    
+158 | Active    |  80 | 1.4.0.SNAPSHOT   | onos-incubator-store                  
+159 | Active    |  80 | 0.0.1.SNAPSHOT   | onos-app-sample 
+```
+
 ##Note
-I could not build ONOS somehow due to some error, so I refered to the following:
+I could not build ONOS due to some error, so I refered to the following:
 https://ask.opendaylight.org/question/3816/odl-conntroller-build-error-execution-default-jar-of-goal-orgapachemavenpluginsmaven-archetype-plugin22jar-failed/
 

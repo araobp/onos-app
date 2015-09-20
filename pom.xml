@@ -12,6 +12,7 @@
  
   <modules>
     <module>sample</module>
+    <module>sample2</module>
   </modules>
 
 </project>

@@ -18,7 +18,7 @@ package araobp;
 import org.apache.felix.scr.annotations.Activate;
 import org.apache.felix.scr.annotations.Component;
 import org.apache.felix.scr.annotations.Deactivate;
-import org.apache.felix.scr.annotations.Service;
+import org.apache.felix.scr.annotations.Reference;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
@@ -26,24 +26,22 @@ import org.slf4j.LoggerFactory;
  * Skeletal ONOS application component.
  */
 @Component(immediate = true)
-@Service
-public class AppComponent implements AppService {
+public class AppConsumer {
 
     private final Logger log = LoggerFactory.getLogger(getClass());
+    
+    @Reference
+    private AppService appService;
 
     @Activate
     protected void activate() {
         log.info("Started");
+        appService.helloWorld("Hello ONOS!");
     }
 
     @Deactivate
     protected void deactivate() {
         log.info("Stopped");
-    }
-
-    @Override
-    public void helloWorld(String message) {
-      log.info(message);
     }
 
 }

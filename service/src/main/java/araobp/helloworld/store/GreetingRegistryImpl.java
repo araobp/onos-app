@@ -50,13 +50,13 @@ public class GreetingRegistryImpl implements GreetingRegistry {
   @Override
   public void put(String name, String greeting) {
     registry.put(name, greeting);
-    log.info("[STORE] key: {}, value: {}", name, greeting);
+    log.info("[STORE] name: {}, greeting: {}", name, greeting);
   }
 
   @Override
   public String get(String name) {
     String greeting = registry.get(name);
-    log.info("[STORE] key: {}, value: {}", name, greeting);
+    log.info("[STORE] name: {}, greeting: {}", name, greeting);
     return greeting;
   }
 }

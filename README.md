@@ -115,17 +115,17 @@ onos> la | grep hello
 
 onos> log:tail
            :
-2015-09-24 15:57:35,033 | INFO  | Thread-174       | HelloWorldServiceImpl            | 179 - araobp.onos-helloworld-service - 0.0.1.SNAPSHOT | [SERVICE] name: 1st, greeting: Hello ONOS!
-2015-09-24 15:57:35,035 | INFO  | Thread-174       | GreetingRegistryImpl             | 179 - araobp.onos-helloworld-service - 0.0.1.SNAPSHOT | [STORE] key: 1st, value: Hello ONOS!
-2015-09-24 15:57:35,035 | INFO  | Thread-174       | HelloWorldServiceImpl            | 179 - araobp.onos-helloworld-service - 0.0.1.SNAPSHOT | [SERVICE] name: 2nd, greeting: How are you?
-2015-09-24 15:57:35,036 | INFO  | Thread-174       | GreetingRegistryImpl             | 179 - araobp.onos-helloworld-service - 0.0.1.SNAPSHOT | [STORE] key: 2nd, value: How are you?
-2015-09-24 15:57:35,036 | INFO  | Thread-174       | HelloWorldApp                    | 180 - araobp.onos-helloworld-app - 0.0.1.SNAPSHOT | [APP] hello world service has been called
-2015-09-24 15:57:38,036 | INFO  | Thread-174       | GreetingRegistryImpl             | 179 - araobp.onos-helloworld-service - 0.0.1.SNAPSHOT | [STORE] key: 2nd, value: How are you?
-2015-09-24 15:57:38,037 | INFO  | Thread-174       | HelloWorldServiceImpl            | 179 - araobp.onos-helloworld-service - 0.0.1.SNAPSHOT | [SERVICE] name: 2nd, greeting: How are you?
-2015-09-24 15:57:38,037 | INFO  | Thread-174       | HelloWorldApp                    | 180 - araobp.onos-helloworld-app - 0.0.1.SNAPSHOT | [APP] 2nd greeting fetched: How are you?
-2015-09-24 15:57:38,037 | INFO  | Thread-174       | GreetingRegistryImpl             | 179 - araobp.onos-helloworld-service - 0.0.1.SNAPSHOT | [STORE] key: 1st, value: Hello ONOS!
-2015-09-24 15:57:38,037 | INFO  | Thread-174       | HelloWorldServiceImpl            | 179 - araobp.onos-helloworld-service - 0.0.1.SNAPSHOT | [SERVICE] name: 1st, greeting: Hello ONOS!
-2015-09-24 15:57:38,037 | INFO  | Thread-174       | HelloWorldApp                    | 180 - araobp.onos-helloworld-app - 0.0.1.SNAPSHOT | [APP] 1st greeting fetched: Hello ONOS!
+2015-09-24 16:03:09,400 | INFO  | Thread-174       | HelloWorldServiceImpl            | 179 - araobp.onos-helloworld-service - 0.0.1.SNAPSHOT | [SERVICE] name: 1st, greeting: Hello ONOS!
+2015-09-24 16:03:09,403 | INFO  | Thread-174       | GreetingRegistryImpl             | 179 - araobp.onos-helloworld-service - 0.0.1.SNAPSHOT | [STORE] name: 1st, greeting: Hello ONOS!
+2015-09-24 16:03:09,403 | INFO  | Thread-174       | HelloWorldServiceImpl            | 179 - araobp.onos-helloworld-service - 0.0.1.SNAPSHOT | [SERVICE] name: 2nd, greeting: How are you?
+2015-09-24 16:03:09,404 | INFO  | Thread-174       | GreetingRegistryImpl             | 179 - araobp.onos-helloworld-service - 0.0.1.SNAPSHOT | [STORE] name: 2nd, greeting: How are you?
+2015-09-24 16:03:09,404 | INFO  | Thread-174       | HelloWorldApp                    | 180 - araobp.onos-helloworld-app - 0.0.1.SNAPSHOT | [APP] hello world service has been called
+2015-09-24 16:03:12,404 | INFO  | Thread-174       | GreetingRegistryImpl             | 179 - araobp.onos-helloworld-service - 0.0.1.SNAPSHOT | [STORE] name: 2nd, greeting: How are you?
+2015-09-24 16:03:12,404 | INFO  | Thread-174       | HelloWorldServiceImpl            | 179 - araobp.onos-helloworld-service - 0.0.1.SNAPSHOT | [SERVICE] name: 2nd, greeting: How are you?
+2015-09-24 16:03:12,405 | INFO  | Thread-174       | HelloWorldApp                    | 180 - araobp.onos-helloworld-app - 0.0.1.SNAPSHOT | [APP] 2nd greeting fetched: How are you?
+2015-09-24 16:03:12,405 | INFO  | Thread-174       | GreetingRegistryImpl             | 179 - araobp.onos-helloworld-service - 0.0.1.SNAPSHOT | [STORE] name: 1st, greeting: Hello ONOS!
+2015-09-24 16:03:12,405 | INFO  | Thread-174       | HelloWorldServiceImpl            | 179 - araobp.onos-helloworld-service - 0.0.1.SNAPSHOT | [SERVICE] name: 1st, greeting: Hello ONOS!
+2015-09-24 16:03:12,405 | INFO  | Thread-174       | HelloWorldApp                    | 180 - araobp.onos-helloworld-app - 0.0.1.SNAPSHOT | [APP] 1st greeting fetched: Hello ONOS!
 
 ```
 So it is running!

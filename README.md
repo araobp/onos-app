@@ -121,13 +121,14 @@ The directory structure of the pacakge is as follows:
 
 ```
 ###Running the sample on ONOS
+I just copied the generated jar files into the deploy folder, then restarted ONOS:
 ```
-onos> list 
-                 :
-147 | Active    |  80 | 1.4.0.SNAPSHOT   | onlab-netty                           
-157 | Active    |  80 | 1.4.0.SNAPSHOT   | onos-incubator-net                    
-158 | Active    |  80 | 1.4.0.SNAPSHOT   | onos-incubator-store                  
-159 | Active    |  80 | 0.0.1.SNAPSHOT   | onos-app-sample 
+onos> list | grep onos-app-sample
+176 | Active |  80 | 0.0.1.SNAPSHOT   | onos-app-sample2                      
+177 | Active |  80 | 0.0.1.SNAPSHOT   | onos-app-sample   
+onos> log:tail
+               :
+2015-09-24 12:39:58,532 | INFO  | Thread-173       | HelloWorldServiceImpl            | 177 - araobp.onos-app-sample - 0.0.1.SNAPSHOT | Hello ONOS!
 ```
 
 ##Note

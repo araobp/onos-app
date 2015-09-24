@@ -13,33 +13,49 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-package araobp;
+package araobp.helloworld.app;
 
 import org.apache.felix.scr.annotations.Activate;
 import org.apache.felix.scr.annotations.Component;
 import org.apache.felix.scr.annotations.Deactivate;
 import org.apache.felix.scr.annotations.Reference;
 import org.apache.felix.scr.annotations.ReferenceCardinality;
+import org.apache.felix.scr.annotations.Service;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
+
+import araobp.helloworld.service.HelloWorldService;
 
 /**
  * Skeletal ONOS application component.
  */
 @Component(immediate = true)
-public class AppConsumer {
+@Service(HelloWorldApp.class)
+public class HelloWorldApp {
 
     private final Logger log = LoggerFactory.getLogger(getClass());
+    private static final String MESSAGE = "Hello ONOS!";
     
     @Reference(cardinality = ReferenceCardinality.MANDATORY_UNARY)
-    private AppService appService;
+    private HelloWorldService appService;
 
     @Activate
     protected void activate() {
         log.info("Started");
-        appService.helloWorld("Hello ONOS!");
+        Thread thread = new Thread(new Runnable() {
+          @Override
+          public void run() {
+            try {
+              Thread.sleep(5000);
+              appService.helloWorld(MESSAGE);
+            } catch (InterruptedException e) {
+              log.error("Unable to run a thread", e);
+            }
+          }
+        });
+        thread.start();
     }
-
+    
     @Deactivate
     protected void deactivate() {
         log.info("Stopped");

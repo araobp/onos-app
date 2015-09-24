@@ -99,6 +99,19 @@ $ mvn clean install
 ##onos-package
 
 ```
+$ source ~/onos/tools/dev/bash_profile
+$ cd ~/onos/tools/test/cells
+       :
+Create your own cell.
+       :
+$ cell <your cell>
+$ onos-package
+```
+
+You will find your onos pacakge under /tmp.
+
+The directory structure of the pacakge is as follows:
+```
 .
 ├── apache-karaf-3.0.3   ==> Karaf itself
 ├── apps   ==> Karaf features for ONOS
@@ -118,6 +131,11 @@ onos> list
 ```
 
 ##Note
-I could not build ONOS due to some error, so I refered to the following:
+I could not build ONOS due to some errors, because "~/.m2/repository/org/apache/maven/plugins/maven-archetype-plugin/2.2/maven-archetype-plugin-2.2.pom" has some problems:
+
+I refered to the following:
 https://ask.opendaylight.org/question/3816/odl-conntroller-build-error-execution-default-jar-of-goal-orgapachemavenpluginsmaven-archetype-plugin22jar-failed/
+
+I also needed to replace the dependency on commons-collections in pom.xml with the following one: http://mvnrepository.com/artifact/commons-collections/commons-collections/3.2.1
+
 

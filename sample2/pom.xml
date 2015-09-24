@@ -27,10 +27,9 @@
 
     <properties>
         <onos.version>1.4.0-SNAPSHOT</onos.version>
-        <!-- Uncomment to generate ONOS app from this module.
-        <onos.app.name>org.foo.app</onos.app.name>
-        <onos.app.origin>Foo, Inc.</onos.app.origin>
-        -->
+        <onos.app.name>hello-world-consumer</onos.app.name>
+        <onos.app.origin>araobp</onos.app.origin>
+        <karaf.version>3.0.3</karaf.version>
     </properties>
 
     <dependencies>
@@ -54,9 +53,7 @@
         </dependency>
 
         <dependency>
-            <groupId>org.onosproject</groupId>
-            <artifactId>onos-api</artifactId>
-            <version>${onos.version}</version>
+            <groupId>org.onosproject</groupId> <artifactId>onos-api</artifactId> <version>${onos.version}</version>
             <scope>test</scope>
             <classifier>tests</classifier>
         </dependency>
@@ -72,6 +69,7 @@
         	<artifactId>onos-app-sample</artifactId>
         	<version>0.0.1-SNAPSHOT</version>
         </dependency>
+
     </dependencies>
 
     <build>

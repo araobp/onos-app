@@ -1,4 +1,4 @@
-package araobp.helloworld.web;
+package araobp.helloworld.web.resources;
 
 import javax.ws.rs.GET;
 import javax.ws.rs.Path;

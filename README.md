@@ -131,6 +131,24 @@ onos> log:tail
 ```
 So it is running!
 
+##What is it?
+
+1. HelloWorldApp calls HelloWorldService's APIs.
+2. HelloWorldSerivce stores input data (key ,value) on HelloWorldStore.
+3. HelloWorldApp fetches the messages on the store.
+
+```
+  [HelloWorldApp]
+          ^
+          | Reference
+          V
+  [HelloWorldSerivce]
+          ^
+          | Reference
+          V
+  [HelloWorldStore] --- (Eventually Consistent HashMap)
+```
+
 ##Note
 I could not build ONOS due to some errors, because "~/.m2/repository/org/apache/maven/plugins/maven-archetype-plugin/2.2/maven-archetype-plugin-2.2.pom" has some problems:
 

@@ -26,6 +26,7 @@ import org.slf4j.LoggerFactory;
 
 import araobp.helloworld.service.HelloWorldService;
 
+
 /**
  * Skeletal ONOS application component.
  */
@@ -51,10 +52,10 @@ public class HelloWorldApp {
               helloWorldService.helloWorld("2nd", MESSAGES[1]);
               log.info("[APP] hello world service has been called");
               Thread.sleep(3000);
-              log.info("[APP] 2nd message fetched: {}",
-                  helloWorldService.getMessage("2nd"));
-              log.info("[APP] 1st message fetched: {}",
-                  helloWorldService.getMessage("1st"));
+              log.info("[APP] 2nd greeting fetched: {}",
+                  helloWorldService.fetchHelloWorld("2nd"));
+              log.info("[APP] 1st greeting fetched: {}",
+                  helloWorldService.fetchHelloWorld("1st"));
             } catch (InterruptedException e) {
               log.error("Unable to run a thread", e);
             }

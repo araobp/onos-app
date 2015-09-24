@@ -24,7 +24,7 @@ import org.apache.felix.scr.annotations.Service;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
-import araobp.helloworld.store.HelloWorldStore;
+import araobp.helloworld.store.GreetingRegistry;
 
 /**
  * Skeletal ONOS application component.
@@ -36,7 +36,7 @@ public class HelloWorldServiceImpl implements HelloWorldService {
     private final Logger log = LoggerFactory.getLogger(getClass());
     
     @Reference(cardinality = ReferenceCardinality.MANDATORY_UNARY)
-    HelloWorldStore messages;
+    GreetingRegistry messages;
 
     @Activate
     protected void activate() {
@@ -49,15 +49,15 @@ public class HelloWorldServiceImpl implements HelloWorldService {
     }
 
     @Override
-    public void helloWorld(final String key, final String value) {
-      log.info("[SERVICE] key: {}, value: {}", key, value);
-      messages.put(key, value);
+    public void helloWorld(final String name, final String greeting) {
+      log.info("[SERVICE] name: {}, greeting: {}", name, greeting);
+      messages.put(name, greeting);
     }
 
     @Override
-    public String getMessage(String key) {
-      String value = messages.get(key);
-      log.info("[SERVICE] key: {}, value: {}", key, value);
-      return value;
+    public String fetchHelloWorld(String name) {
+      String greeting = messages.get(name);
+      log.info("[SERVICE] name: {}, greeting: {}", name, greeting);
+      return greeting;
     }
 }

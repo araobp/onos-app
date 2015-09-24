@@ -1,6 +1,6 @@
 package araobp.helloworld.store;
 
-public interface HelloWorldStore {
+public interface GreetingRegistry {
   
   public void put(String key, String value);
 

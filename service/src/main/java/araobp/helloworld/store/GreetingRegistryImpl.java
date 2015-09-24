@@ -15,11 +15,11 @@ import org.slf4j.LoggerFactory;
 
 @Component(immediate = true)
 @Service
-public class HelloWorldStoreImpl implements HelloWorldStore {
+public class GreetingRegistryImpl implements GreetingRegistry {
 
   private final Logger log = LoggerFactory.getLogger(getClass());
 
-  private EventuallyConsistentMap<String, String> messages;
+  private EventuallyConsistentMap<String, String> registry;
 
   @Reference(cardinality = ReferenceCardinality.MANDATORY_UNARY)
   protected StorageService storageService;
@@ -34,7 +34,7 @@ public class HelloWorldStoreImpl implements HelloWorldStore {
         .newBuilder()
         .register(String.class);
 
-    messages = storageService.<String, String> eventuallyConsistentMapBuilder()
+    registry = storageService.<String, String> eventuallyConsistentMapBuilder()
         .withName("apps")
         .withSerializer(serializer)
         .withTimestampProvider((k, v) -> clockService.getTimestamp())
@@ -48,15 +48,15 @@ public class HelloWorldStoreImpl implements HelloWorldStore {
   }
   
   @Override
-  public void put(String key, String value) {
-    messages.put(key, value);
-    log.info("[STORE] key: {}, value: {}", key, value);
+  public void put(String name, String greeting) {
+    registry.put(name, greeting);
+    log.info("[STORE] key: {}, value: {}", name, greeting);
   }
 
   @Override
-  public String get(String key) {
-    String value = messages.get(key);
-    log.info("[STORE] key: {}, value: {}", key, value);
-    return value;
+  public String get(String name) {
+    String greeting = registry.get(name);
+    log.info("[STORE] key: {}, value: {}", name, greeting);
+    return greeting;
   }
 }

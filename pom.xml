@@ -13,6 +13,7 @@
   <modules>
     <module>service</module>
     <module>app</module>
+    <module>web</module>
   </modules>
 
 </project>

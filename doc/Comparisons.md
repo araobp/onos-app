@@ -12,3 +12,29 @@ These datastores are embedded in ONOS, so no sockets(UNIX/INET) are required to 
 
 ONOS is good for networking services requiring BASE for high performance and linear scalability.
 
+##Pros and Cons
+
+###ODL
+Pros
+- N.B. APIs generated from YANG models automatically
+- YANG models (incl. RPCs) being standardized by IETF
+- Tree-structure data models for network configuration
+- Datastore transaction support
+
+Cons
+- YANG models required also for inter-bundle communications and for dependency injection into bundles
+- Imcomplete clustering capabilities
+- Data persistency unsupported yet
+- Two types of datastores: ECMAP and RAFT
+
+###ONOS
+Pros
+- Java-centric APIs
+- High-performance, high-scalability
+- CLI support (based on Karaf CLI)
+
+Cons
+- N.B. APIs implemeted manually
+- Data models not standardized by ISO
+- Key-Value data structure not sutable for network configuration 
+

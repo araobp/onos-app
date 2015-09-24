@@ -6,13 +6,13 @@
   <modelVersion>4.0.0</modelVersion>
 
   <groupId>araobp</groupId>
-  <artifactId>onos-app</artifactId>
+  <artifactId>onos-helloworld</artifactId>
   <version>0.0.1-SNAPSHOT</version>
   <packaging>pom</packaging>
  
   <modules>
-    <module>sample</module>
-    <module>sample2</module>
+    <module>service</module>
+    <module>app</module>
   </modules>
 
 </project>

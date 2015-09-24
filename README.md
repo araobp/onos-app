@@ -106,16 +106,30 @@ The directory structure of the pacakge is as follows:
 └── VERSION
 
 ```
-###Running the sample on ONOS
+###Running the sample app "helloworld" on ONOS
 I just copied the generated jar files into the deploy folder, then restarted ONOS:
 ```
-onos> list | grep onos-app-sample
-176 | Active |  80 | 0.0.1.SNAPSHOT   | onos-app-sample2                      
-177 | Active |  80 | 0.0.1.SNAPSHOT   | onos-app-sample   
+onos> la | grep hello
+179 | Active   |  80 | 0.0.1.SNAPSHOT        | onos-helloworld-service                                                       
+180 | Active   |  80 | 0.0.1.SNAPSHOT        | onos-helloworld-app        
 onos> log:tail
-               :
-2015-09-24 12:39:58,532 | INFO  | Thread-173       | HelloWorldServiceImpl            | 177 - araobp.onos-app-sample - 0.0.1.SNAPSHOT | Hello ONOS!
+
+           :
+
+2015-09-24 15:15:22,585 | INFO  | Thread-178       | HelloWorldServiceImpl            | 179 - araobp.onos-helloworld-service - 0.0.1.SNAPSHOT | [SERVICE] key: 1st, value: Hello ONOS!
+2015-09-24 15:15:22,587 | INFO  | Thread-178       | HelloWorldStoreImpl              | 179 - araobp.onos-helloworld-service - 0.0.1.SNAPSHOT | [STORE] key: 1st, value: Hello ONOS!
+2015-09-24 15:15:22,587 | INFO  | Thread-178       | HelloWorldServiceImpl            | 179 - araobp.onos-helloworld-service - 0.0.1.SNAPSHOT | [SERVICE] key: 2nd, value: How are you?
+2015-09-24 15:15:22,588 | INFO  | Thread-178       | HelloWorldStoreImpl              | 179 - araobp.onos-helloworld-service - 0.0.1.SNAPSHOT | [STORE] key: 2nd, value: How are you?
+2015-09-24 15:15:22,588 | INFO  | Thread-178       | HelloWorldApp                    | 180 - araobp.onos-helloworld-app - 0.0.1.SNAPSHOT | [APP] hello world service has been called
+2015-09-24 15:15:25,588 | INFO  | Thread-178       | HelloWorldStoreImpl              | 179 - araobp.onos-helloworld-service - 0.0.1.SNAPSHOT | [STORE] key: 2nd, value: How are you?
+2015-09-24 15:15:25,589 | INFO  | Thread-178       | HelloWorldServiceImpl            | 179 - araobp.onos-helloworld-service - 0.0.1.SNAPSHOT | [SERVICE] key: 2nd, value: How are you?
+2015-09-24 15:15:25,589 | INFO  | Thread-178       | HelloWorldApp                    | 180 - araobp.onos-helloworld-app - 0.0.1.SNAPSHOT | [APP] 2nd message fetched: How are you?
+2015-09-24 15:15:25,589 | INFO  | Thread-178       | HelloWorldStoreImpl              | 179 - araobp.onos-helloworld-service - 0.0.1.SNAPSHOT | [STORE] key: 1st, value: Hello ONOS!
+2015-09-24 15:15:25,589 | INFO  | Thread-178       | HelloWorldServiceImpl            | 179 - araobp.onos-helloworld-service - 0.0.1.SNAPSHOT | [SERVICE] key: 1st, value: Hello ONOS!
+2015-09-24 15:15:25,589 | INFO  | Thread-178       | HelloWorldApp                    | 180 - araobp.onos-helloworld-app - 0.0.1.SNAPSHOT | [APP] 1st message fetched: Hello ONOS!
+
 ```
+So it is running!
 
 ##Note
 I could not build ONOS due to some errors, because "~/.m2/repository/org/apache/maven/plugins/maven-archetype-plugin/2.2/maven-archetype-plugin-2.2.pom" has some problems:

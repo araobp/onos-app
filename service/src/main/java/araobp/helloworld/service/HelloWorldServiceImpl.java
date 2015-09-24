@@ -13,7 +13,7 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-package araobp.helloworld.app;
+package araobp.helloworld.service;
 
 import org.apache.felix.scr.annotations.Activate;
 import org.apache.felix.scr.annotations.Component;
@@ -24,41 +24,40 @@ import org.apache.felix.scr.annotations.Service;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
-import araobp.helloworld.service.HelloWorldService;
+import araobp.helloworld.store.HelloWorldStore;
 
 /**
  * Skeletal ONOS application component.
  */
 @Component(immediate = true)
-@Service(HelloWorldApp.class)
-public class HelloWorldApp {
+@Service
+public class HelloWorldServiceImpl implements HelloWorldService {
 
     private final Logger log = LoggerFactory.getLogger(getClass());
-    private static final String MESSAGE = "Hello ONOS!";
     
     @Reference(cardinality = ReferenceCardinality.MANDATORY_UNARY)
-    private HelloWorldService appService;
+    HelloWorldStore messages;
 
     @Activate
     protected void activate() {
         log.info("Started");
-        Thread thread = new Thread(new Runnable() {
-          @Override
-          public void run() {
-            try {
-              Thread.sleep(5000);
-              appService.helloWorld(MESSAGE);
-            } catch (InterruptedException e) {
-              log.error("Unable to run a thread", e);
-            }
-          }
-        });
-        thread.start();
     }
-    
+
     @Deactivate
     protected void deactivate() {
         log.info("Stopped");
     }
 
+    @Override
+    public void helloWorld(final String key, final String value) {
+      log.info("[SERVICE] key: {}, value: {}", key, value);
+      messages.put(key, value);
+    }
+
+    @Override
+    public String getMessage(String key) {
+      String value = messages.get(key);
+      log.info("[SERVICE] key: {}, value: {}", key, value);
+      return value;
+    }
 }

@@ -25,12 +25,12 @@ Cons
 - YANG models required also for inter-bundle communications and for dependency injection into bundles
 - Imcomplete clustering capabilities
 - Data persistency unsupported yet
-- Two types of datastores: ECMAP and RAFT
 
 ###ONOS
 Pros
 - Java-centric APIs
 - High-performance, high-scalability
+- Two types of datastores: ECMAP and RAFT
 - CLI support (based on Karaf CLI)
 
 Cons

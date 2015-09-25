@@ -5,9 +5,14 @@
         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
     <modelVersion>4.0.0</modelVersion>
 
-    <groupId>araobp</groupId>
+    <parent>
+        <groupId>araobp</groupId>
+        <artifactId>onos-helloworld</artifactId>
+        <version>0.0.1-SNAPSHOT</version>
+        <relativePath>../pom.xml</relativePath>
+    </parent>
+
     <artifactId>onos-helloworld-web</artifactId>
-    <version>0.0.1-SNAPSHOT</version>
     <packaging>bundle</packaging>
 
     <properties>
@@ -26,6 +31,11 @@
             <groupId>org.onosproject</groupId>
             <artifactId>onos-api</artifactId>
             <version>${onos.version}</version>
+        </dependency>
+        <dependency>
+            <groupId>araobp</groupId>
+            <artifactId>onos-helloworld-service</artifactId>
+            <version>${project.version}</version>
         </dependency>
     </dependencies>
     <build>

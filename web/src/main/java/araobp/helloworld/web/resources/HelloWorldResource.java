@@ -7,7 +7,7 @@ import javax.ws.rs.core.Response;
 
 import org.onosproject.rest.AbstractWebResource;
 
-@Path("helloworld")
+@Path("greeting")
 public class HelloWorldResource  extends AbstractWebResource {
   
   @GET

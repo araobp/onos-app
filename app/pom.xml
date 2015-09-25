@@ -22,7 +22,7 @@
     <version>0.0.1-SNAPSHOT</version>
     <packaging>bundle</packaging>
 
-    <description>ONOS OSGi bundle archetype</description>
+    <description>Hello World app.</description>
     <url>http://onosproject.org</url>
 
     <properties>

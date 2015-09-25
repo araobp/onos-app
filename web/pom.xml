@@ -12,7 +12,7 @@
 
     <properties>
         <onos.app.name>helloworld-web</onos.app.name>
-        <web.context>/onos/helloworld</web.context>
+        <web.context>/helloworld</web.context>
         <onos.version>1.4.0-SNAPSHOT</onos.version>
     </properties>
 

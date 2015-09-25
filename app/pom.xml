@@ -69,6 +69,7 @@
             <version>1.9.8</version>
             <scope>provided</scope>
         </dependency>
+
         <dependency>
         	<groupId>araobp</groupId>
         	<artifactId>onos-helloworld-service</artifactId>

@@ -4,5 +4,5 @@ public interface HelloWorldService {
   
   public void helloWorld(final String name, final String greeting);
 
-  public String fetchHelloWorld(final String name);
+  public String fetchGreeting(final String name);
 }

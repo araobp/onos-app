@@ -26,9 +26,6 @@ import org.slf4j.LoggerFactory;
 
 import araobp.helloworld.store.GreetingRegistry;
 
-/**
- * Skeletal ONOS application component.
- */
 @Component(immediate = true)
 @Service
 public class HelloWorldServiceImpl implements HelloWorldService {
@@ -55,7 +52,7 @@ public class HelloWorldServiceImpl implements HelloWorldService {
     }
 
     @Override
-    public String fetchHelloWorld(String name) {
+    public String fetchGreeting(String name) {
       String greeting = messages.get(name);
       log.info("[SERVICE] name: {}, greeting: {}", name, greeting);
       return greeting;

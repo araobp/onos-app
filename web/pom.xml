@@ -33,6 +33,12 @@
             <version>${onos.version}</version>
         </dependency>
         <dependency>
+            <groupId>org.apache.felix</groupId>
+            <artifactId>org.apache.felix.scr.annotations</artifactId>
+            <version>1.9.8</version>
+            <scope>provided</scope>
+        </dependency>
+        <dependency>
             <groupId>araobp</groupId>
             <artifactId>onos-helloworld-service</artifactId>
             <version>${project.version}</version>

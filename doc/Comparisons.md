@@ -35,6 +35,6 @@ Pros
 
 Cons
 - N.B. APIs implemeted manually
-- Data models not standardized by ISO
+- Data models not standardized by SDO 
 - Key-Value data structure not sutable for network configuration 
 

@@ -1,9 +1,9 @@
-#How to make an ONOS application
+# How to make an ONOS application
 
 [The ONOS project](http://onosproject.org/) provides a maven archetype ["onos-bundle-archetype"](
 https://wiki.onosproject.org/display/ONOS/Template+Application+Tutorial) that is very cool.
 
-##Testing onos-bundle-archetype
+## Testing onos-bundle-archetype
 
 ```
 $ mvn archetype:generate -DarchetypeGroupId=org.onosproject -DarchetypeArtifactId=onos-bundle-archetype
@@ -27,7 +27,7 @@ karaf@root()> log:tail
 ```
 It worked on Karaf OSGi container with "scr" feature.
 
-##OSGi Declarative Services (DS)
+## OSGi Declarative Services (DS)
 
 ONOS adopts [DS](http://wiki.osgi.org/wiki/Declarative_Services) for every OSGi bundle, and the archetype "onos-bundle-archetype" seems to support DS. Unlike OpenDaylight, you can use "raw" (or standard) APIs such as @Activate annotaion.
 
@@ -64,9 +64,9 @@ public class AppComponent {
 }
 ```
 
-##Building ONOS
+## Building ONOS
 
-###Prerequisites
+### Prerequisites
 
 - Java8
 - Maven3.3.X
@@ -75,14 +75,14 @@ public class AppComponent {
 
 See this page: https://wiki.onosproject.org/display/ONOS/Installing+and+Running+ONOS
 
-###Build
+### Build
 
 ```
 $ git clone https://gerrit.onosproject.org/onos
 $ mvn clean install
 ```
 
-##onos-package
+## onos-package
 
 ```
 $ source ~/onos/tools/dev/bash_profile
@@ -106,7 +106,7 @@ The directory structure of the pacakge is as follows:
 └── VERSION
 
 ```
-###Running the sample app "helloworld" on ONOS
+### Running the sample app "helloworld" on ONOS
 I just copied the generated jar files into the deploy folder, then restarted ONOS:
 ```
 onos> la | grep hello
@@ -130,7 +130,7 @@ onos> log:tail
 ```
 So it is running!
 
-##What is it?
+## What is it?
 
 1. HelloWorldApp calls HelloWorldService's APIs.
 2. HelloWorldSerivce stores input data (key ,value) on HelloWorldStore.
@@ -148,7 +148,7 @@ So it is running!
   [HelloWorldStore] --- (Eventually Consistent HashMap)
 ```
 
-##Note
+## Note
 I could not build ONOS due to some errors, because "~/.m2/repository/org/apache/maven/plugins/maven-archetype-plugin/2.2/maven-archetype-plugin-2.2.pom" has some problems:
 
 I refered to the following:
